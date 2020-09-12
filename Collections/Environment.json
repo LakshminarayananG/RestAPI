@@ -1,0 +1,24 @@
+{
+	"id": "7bbf7782-6b17-4b35-b893-738a8bfed0c5",
+	"name": "Service_Dev_Login",
+	"values": [
+		{
+			"key": "username",
+			"value": "admin",
+			"enabled": true
+		},
+		{
+			"key": "password",
+			"value": "India@123",
+			"enabled": true
+		},
+		{
+			"key": "dev_server",
+			"value": "https://dev90550.service-now.com",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-09-12T04:26:20.968Z",
+	"_postman_exported_using": "Postman/7.31.1"
+}

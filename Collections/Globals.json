@@ -1,0 +1,64 @@
+{
+	"id": "3f3b80f8-7193-48eb-8b45-ee8fd99ec5da",
+	"values": [
+		{
+			"key": "resources",
+			"value": "api/now/table",
+			"enabled": true
+		},
+		{
+			"key": "IssID",
+			"value": "10042",
+			"enabled": true
+		},
+		{
+			"key": "url",
+			"value": "lakshminarayanan",
+			"enabled": true
+		},
+		{
+			"key": "issues_count",
+			"value": 28,
+			"enabled": true
+		},
+		{
+			"key": "issue_random",
+			"value": "10022",
+			"enabled": true
+		},
+		{
+			"key": "id",
+			"value": "10036",
+			"enabled": true
+		},
+		{
+			"key": "issueid",
+			"value": "10005",
+			"enabled": true
+		},
+		{
+			"key": "sessionId",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "apprul",
+			"value": "https://www.google.com",
+			"enabled": true
+		},
+		{
+			"key": "element",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "sys_id",
+			"value": "",
+			"enabled": true
+		}
+	],
+	"name": "My Workspace Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2020-09-12T04:24:07.143Z",
+	"_postman_exported_using": "Postman/7.31.1"
+}
