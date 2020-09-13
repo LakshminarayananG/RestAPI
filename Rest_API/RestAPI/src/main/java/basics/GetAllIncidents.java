@@ -1,6 +1,10 @@
 package basics;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.Properties;
+
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -9,6 +13,18 @@ public class GetAllIncidents {
 	
 	@Test
 	public void getAllIncidents() {
+		Properties prop = new Properties();
+
+		try {
+		    prop.load(new FileInputStream("./Properties/Token.properties"));
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		
+		String authtoken=prop.getProperty("OAuth2_Token");
+		
+		
+		
 		
 		//Declaring the query params in a hashmap and passing the hashmap to the request
 		HashMap<String,String> querypar=new HashMap<String,String>();
@@ -19,7 +35,7 @@ public class GetAllIncidents {
 		RestAssured.baseURI="https://dev90550.service-now.com/api/now/table/incident";
 		
 		//Step 2: Authorization
-		RestAssured.authentication=RestAssured.oauth2("OAuth Token");
+		RestAssured.authentication=RestAssured.oauth2(authtoken);
 		
 		//Ste 3: Set Request Type
 		Response response=RestAssured

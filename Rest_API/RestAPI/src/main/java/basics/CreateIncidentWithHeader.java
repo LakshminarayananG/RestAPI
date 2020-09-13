@@ -1,5 +1,9 @@
 package basics;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -11,6 +15,15 @@ public class CreateIncidentWithHeader {
 
 	@Test
 	public void createIncidentWithoutBody() {
+		Properties prop = new Properties();
+
+		try {
+		    prop.load(new FileInputStream("./Properties/Token.properties"));
+		} catch (IOException e) {
+		    e.printStackTrace();
+		}
+		
+		String authtoken=prop.getProperty("OAuth2_Token");
 
 		// Step 1: Get the endpoint URI
 		RestAssured.baseURI = "https://dev90550.service-now.com/api/now/table/incident";
@@ -19,7 +32,7 @@ public class CreateIncidentWithHeader {
 		// Step 2: Construct the request
 		Response response = RestAssured
 				.given()
-				.header(new Header("Authorization", "OAuth Token"))
+				.header(new Header("Authorization", "Bearer "+authtoken+""))
 				//.contentType("application/json")
 				.contentType(ContentType.JSON)
 				.post();

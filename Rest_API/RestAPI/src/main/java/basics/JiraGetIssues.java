@@ -19,7 +19,8 @@ public class JiraGetIssues {
 		RestAssured.baseURI="https://laks7.atlassian.net/rest/api/2/search";
 		
 		//Step 2: Authorization
-		RestAssured.authentication=RestAssured.preemptive().basic("Username", "API Key");
+		RestAssured.authentication=RestAssured.preemptive().basic("username", "password");
+
 		
 		//Ste 3: Set Request Type
 		Response response=RestAssured
