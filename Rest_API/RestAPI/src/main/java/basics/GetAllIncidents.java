@@ -19,7 +19,7 @@ public class GetAllIncidents {
 		RestAssured.baseURI="https://dev90550.service-now.com/api/now/table/incident";
 		
 		//Step 2: Authorization
-		RestAssured.authentication=RestAssured.basic("username", "password");
+		RestAssured.authentication=RestAssured.oauth2("OAuth Token");
 		
 		//Ste 3: Set Request Type
 		Response response=RestAssured
